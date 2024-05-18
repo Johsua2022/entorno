@@ -40,3 +40,12 @@ print(df.loc[df['Date'] == '5/5/2016', 'Total_Distance'].sum())
 
 
 # sumar cuantos realizaron actividad fisica entre primero de enero al 18 de mayo de 2016
+
+def actividad_fisica(date):
+    suma = 0
+    for i in date:
+        if i >= '1/1/2016' and i <= '5/18/2016':
+            suma += 1
+    return suma
+
+print(actividad_fisica(df['Date']))
